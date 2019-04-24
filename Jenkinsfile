@@ -25,7 +25,7 @@ node('master') {
 
     stage('Push to Docker Hub') {
         // Not actually rebuilding, due to cache. Using for the purpose of retagging.
-        dockerImage action: 'build', tag: 'juniperps/j-edi-web'
+        dockerImage action: 'build', tag: 'juniperps/robot-runner'
 
         // Using ssteiner's DockerHub credentials (ntwrkguru)
         dockerImage action: 'push', url: '', credentials: '1a7b4d9f-8b15-4d93-beb9-8d34f010f543'
